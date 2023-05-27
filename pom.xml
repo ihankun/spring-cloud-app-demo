@@ -36,6 +36,10 @@
 			<groupId>com.ihankun.core.db</groupId>
 			<artifactId>db</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.ihankun.core.log</groupId>
+			<artifactId>log</artifactId>
+		</dependency>
 
 
 	</dependencies>
