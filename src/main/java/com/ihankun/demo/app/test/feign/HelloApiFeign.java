@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Api(tags = "测试api")
-@FeignClient(name = "${spring.application.demo.api.name}", fallbackFactory = HelloApiFallback.class)
+@FeignClient(name = "${spring.application.api.demo.name}", fallbackFactory = HelloApiFallback.class)
 @RequestMapping("/api/test")
 public interface HelloApiFeign {
 
