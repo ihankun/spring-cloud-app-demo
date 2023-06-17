@@ -1,6 +1,6 @@
 package com.ihankun.demo.app.test.feign;
 
-import com.ihankun.core.base.api.ResponseResult;
+import com.ihankun.core.base.response.ResponseResult;
 import feign.hystrix.FallbackFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

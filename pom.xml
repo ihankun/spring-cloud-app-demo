@@ -20,17 +20,15 @@
 	</properties>
 
 	<dependencies>
+
+
 		<dependency>
-			<groupId>com.ihankun.core.spring.server</groupId>
-			<artifactId>spring-server</artifactId>
+			<groupId>com.ihankun.core.base</groupId>
+			<artifactId>base</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.ihankun.core.commons</groupId>
 			<artifactId>commons</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.ihankun.core.base</groupId>
-			<artifactId>base</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.ihankun.core.db</groupId>
@@ -40,6 +38,16 @@
 			<groupId>com.ihankun.core.log</groupId>
 			<artifactId>log</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.ihankun.core.spring.server</groupId>
+			<artifactId>spring-server</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ihankun.open.api</groupId>
+			<artifactId>spring-cloud-api-open-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
 
 	</dependencies>
@@ -47,10 +55,6 @@
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
-<!--			<plugin>-->
-<!--				<groupId>org.apache.maven.plugins</groupId>-->
-<!--				<artifactId>maven-compiler-plugin</artifactId>-->
-<!--			</plugin>-->
 			<!--打包-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -79,23 +83,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-
-<!--		<resources>-->
-<!--			<resource>-->
-<!--				<directory>src/main/java</directory>-->
-<!--				<includes>-->
-<!--					<include>**/*.xml</include>-->
-<!--					<include>**/*.properties</include>-->
-<!--				</includes>-->
-<!--			</resource>-->
-<!--			<resource>-->
-<!--				<directory>src/main/resources</directory>-->
-<!--				<includes>-->
-<!--					<include>**/*.xml</include>-->
-<!--					<include>**/*.properties</include>-->
-<!--				</includes>-->
-<!--			</resource>-->
-<!--		</resources>-->
 	</build>
 
 </project>
