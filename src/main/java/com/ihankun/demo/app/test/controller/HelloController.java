@@ -1,13 +1,11 @@
 package com.ihankun.demo.app.test.controller;
 
-import com.ihankun.core.base.api.ResponseResult;
+import com.ihankun.core.base.response.ResponseResult;
 import com.ihankun.demo.app.test.service.HelloService;
+import com.ihankun.open.api.mxnzp.holiday.entity.vo.HolidayVO;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.Mapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -32,4 +30,15 @@ public class HelloController {
     public ResponseResult<String> helloApi() {
         return ResponseResult.success(helloService.helloApi());
     }
+
+    @GetMapping("/holiday/{date}")
+    public ResponseResult<HolidayVO> holiday(@PathVariable("date") String date) {
+        return ResponseResult.success(helloService.holiday(date));
+    }
+
+    @GetMapping("/qr")
+    public ResponseResult<String> qr() {
+        return ResponseResult.success(helloService.qr());
+    }
+
 }
