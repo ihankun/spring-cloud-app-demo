@@ -7,4 +7,6 @@ public interface HelloService {
     String helloApi();
 
     HolidayVO holiday(String date);
+
+    String qr();
 }

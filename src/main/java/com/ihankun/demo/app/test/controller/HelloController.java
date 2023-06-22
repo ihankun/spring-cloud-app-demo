@@ -35,4 +35,10 @@ public class HelloController {
     public ResponseResult<HolidayVO> holiday(@PathVariable("date") String date) {
         return ResponseResult.success(helloService.holiday(date));
     }
+
+    @GetMapping("/qr")
+    public ResponseResult<String> qr() {
+        return ResponseResult.success(helloService.qr());
+    }
+
 }

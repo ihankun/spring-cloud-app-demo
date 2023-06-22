@@ -2,6 +2,7 @@ package com.ihankun.demo.app.test.service.impl;
 
 import com.ihankun.core.base.exception.BusinessException;
 import com.ihankun.core.base.response.ResponseResult;
+import com.ihankun.core.commons.qrcode.QrCodeBuilder;
 import com.ihankun.demo.app.test.feign.HelloApiFeign;
 import com.ihankun.demo.app.test.service.HelloService;
 import com.ihankun.open.api.mxnzp.holiday.HolidayApi;
@@ -40,5 +41,11 @@ public class HelloServiceImpl implements HelloService {
             throw BusinessException.build("查询出错"+responseResult.getMessage());
         }
         return responseResult.getData();
+    }
+
+    @Override
+    public String qr() {
+        String img = QrCodeBuilder.ins().create("测试", 50, 50);
+        return img;
     }
 }
